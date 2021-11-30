@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_field_width">330dp</dimen>
+    <dimen name="spacing_fields">24dp</dimen>
+    <dimen name="spacing_btn">40dp</dimen>
+    <dimen name="form_img_margin_right">10dp</dimen>
+    <dimen name="default_info_width">350dp</dimen>
+    <dimen name="name_header_size">25sp</dimen>
+</resources>

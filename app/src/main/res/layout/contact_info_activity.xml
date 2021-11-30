@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/name_info_view"
+        style="@style/AppTheme.ContactInfo.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/name_header_size"
+        android:layout_marginBottom="10dp"
+        android:text="First lastname" />
+
+    <HorizontalScrollView
+        android:layout_width="@dimen/default_info_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="end"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/call_btn"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_button_label"
+                app:chipIcon="@drawable/ic_phone_black_24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_btn"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_button_label"
+                app:chipIcon="@drawable/ic_textsms_black_24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/email_btn"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_button_label"
+                app:chipIcon="@drawable/ic_email_black_24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/map_btn"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/directions_button_label"
+                app:chipIcon="@drawable/ic_directions_black_24dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/web_btn"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/web_button_label"
+                app:chipIcon="@drawable/ic_public_black_24dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/information_area"
+        android:layout_width="@dimen/default_info_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/phone_info_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/AppTheme.ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_phone_black_24dp" />
+
+            <TextView
+                android:id="@+id/phone_info_view"
+                style="@style/AppTheme.ContactInfo.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:text="123456789" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/AppTheme.ContactInfo.HorizontalDivider"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/email_info_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/AppTheme.ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_email_black_24dp" />
+
+            <TextView
+                android:id="@+id/email_info_view"
+                style="@style/AppTheme.ContactInfo.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:text="sample_email@email.com" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/AppTheme.ContactInfo.HorizontalDivider"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/address_info_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/AppTheme.ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_place_black_24dp" />
+
+            <TextView
+                android:id="@+id/address_info_view"
+                style="@style/AppTheme.ContactInfo.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Route 230, Sinnoh" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/AppTheme.ContactInfo.HorizontalDivider"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/website_info_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/AppTheme.ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_public_black_24dp" />
+
+            <TextView
+                android:id="@+id/website_info_view"
+                style="@style/AppTheme.ContactInfo.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="www.sample_website.com" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
